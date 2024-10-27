@@ -116,7 +116,7 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 	}
 	defer res.Body.Close()
 
-	if res.StatusCode != 201 {
+	if res.StatusCode != 204 {
 		respBody, err := io.ReadAll(res.Body)
 		if err != nil {
 			panic(err)
